@@ -23,9 +23,8 @@
   --gold-border:   rgba(201, 168, 76, 0.38);
   --gold-border-hover: rgba(201, 168, 76, 0.7);
 
-  /* Green (hero primary CTA only) */
+  /* Green — logo accent only, not used for buttons */
   --green:         #2EBD59;
-  --green-dark:    #1A9E46;
 
   /* Text — dark section defaults */
   --text:          #FFFFFF;
@@ -141,12 +140,6 @@ ul { list-style: none; }
   border: none; cursor: pointer;
   transition: all 0.2s ease;
   letter-spacing: 0.01em;
-}
-.btn-green { background: var(--green); color: white; }
-.btn-green:hover {
-  background: var(--green-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(46,189,89,0.35);
 }
 .btn-gold-outline {
   background: transparent;
