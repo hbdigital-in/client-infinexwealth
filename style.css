@@ -120,11 +120,11 @@ ul { list-style: none; }
 }
 
 .nav-links { display: flex; align-items: center; gap: 2rem; }
-.nav-links li a {
+.nav-links li a:not(.btn) {
   font-size: 0.875rem; font-weight: 500;
   color: var(--text-muted); transition: color 0.2s;
 }
-.nav-links li a:hover { color: var(--text); }
+.nav-links li a:not(.btn):hover { color: var(--text); }
 .nav-cta a:not(.btn-gold-fill) { color: var(--gold); }
 .nav-toggle {
   display: none; background: none; border: none;
