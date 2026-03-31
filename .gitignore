@@ -1,0 +1,9 @@
+# Source documents (not for version control)
+*.docx
+*.pdf
+extracted_text.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+*.jpeg
