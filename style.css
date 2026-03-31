@@ -126,7 +126,7 @@ ul { list-style: none; }
   color: var(--text-muted); transition: color 0.2s;
 }
 .nav-links li a:hover { color: var(--text); }
-.nav-cta a { color: var(--gold) !important; }
+.nav-cta a:not(.btn-gold-fill) { color: var(--gold); }
 .nav-toggle {
   display: none; background: none; border: none;
   font-size: 1.5rem; cursor: pointer; color: var(--text);
