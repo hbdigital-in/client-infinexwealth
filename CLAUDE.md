@@ -24,23 +24,19 @@ python -m http.server 8000
 ## File Structure
 
 ```
-www/
-  index.html     # Full single-page site
-  style.css      # Dark theme — all custom (not from template-static)
-  script.js      # Navbar, FAQ accordion, form async, scroll reveal
-  CNAME          # infinexwealth.com
-  images/        # Copy client assets here before first deploy
-    logo.jpeg          ← from InfinexWealth_logo.jpeg
-    nikhil-headshot.jpeg ← from Nikhil_Headshot.jpeg
-    infographic.jpeg   ← from InfinexWealth_Infographic.jpeg (optional use)
+index.html           # Full single-page site
+style.css            # Light theme — all custom (not from template-static)
+script.js            # Navbar dark→light, FAQ accordion, form async, scroll reveal
+CNAME                # infinexwealth.com
+CLAUDE.md            # This file
+images/
+  logo.png           # Transparent PNG (from InfinexWealth_logo.jpeg via remove.bg)
+  logo.jpeg          # Original JPEG (kept for reference)
+  nikhil-headshot.jpeg
+  infographic.jpeg   # Used in How We Work section
 ```
 
-**Before first deploy:** Copy images from repo root into `www/images/`:
-```bash
-cp InfinexWealth_logo.jpeg www/images/logo.jpeg
-cp Nikhil_Headshot.jpeg www/images/nikhil-headshot.jpeg
-cp InfinexWealth_Infographic.jpeg www/images/infographic.jpeg
-```
+All web files are at the **repo root** — GitHub Pages serves from `main` branch, root folder (`/`).
 
 ## Brand
 
@@ -63,8 +59,8 @@ cp InfinexWealth_Infographic.jpeg www/images/infographic.jpeg
 
 ## Deployment
 
-- Branch `dev` → work in progress (share `github.io/...` link for client preview)
-- Branch `main` → auto-deploys live
+- GitHub Pages: `main` branch, root folder (`/`) — not `/www`
+- Branch `main` → auto-deploys live at https://infinexwealth.com
 - DNS managed in Cloudflare (DNS-only, not proxied)
 - HTTPS auto-managed by GitHub Pages
 
