@@ -1,9 +1,14 @@
-# Source documents (not for version control)
+# Source documents at repo root — not for version control
 *.docx
 *.pdf
 extracted_text.txt
+InfinexWealth_Infographic.jpeg
+InfinexWealth_logo.jpeg
+Nikhil_Headshot.jpeg
+
+# Windows artifacts
+logo - Copy.png
 
 # OS files
 .DS_Store
 Thumbs.db
-*.jpeg
