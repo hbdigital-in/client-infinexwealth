@@ -2,6 +2,7 @@
    Infinex Wealth — Site Styles
    Dark navy + gold accent design
    Cormorant Garamond (headings) + Manrope (body)
+   Dark/light alternating sections
    ============================================ */
 
 :root {
@@ -11,6 +12,10 @@
   --bg-card:       rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(255, 255, 255, 0.055);
 
+  /* Light Backgrounds */
+  --bg-light:      #F7F5F1;
+  --bg-light-alt:  #FFFFFF;
+
   /* Gold Palette */
   --gold:          #C9A84C;
   --gold-bright:   #E4C06E;
@@ -18,11 +23,11 @@
   --gold-border:   rgba(201, 168, 76, 0.38);
   --gold-border-hover: rgba(201, 168, 76, 0.7);
 
-  /* Green (CTA buttons only) */
+  /* Green (hero primary CTA only) */
   --green:         #2EBD59;
   --green-dark:    #1A9E46;
 
-  /* Text */
+  /* Text — dark section defaults */
   --text:          #FFFFFF;
   --text-muted:    rgba(255, 255, 255, 0.55);
   --text-dim:      rgba(255, 255, 255, 0.3);
@@ -42,6 +47,41 @@
   --max:    1140px;
   --radius: 8px;
 }
+
+/* ─── LIGHT SECTION OVERRIDE ─── */
+/* Redefine CSS variables at section level — all children inherit automatically */
+.section-light {
+  background: var(--bg-light);
+  --text:          #0A1628;
+  --text-muted:    #3A4E65;
+  --text-dim:      rgba(10, 22, 40, 0.35);
+  --border:        rgba(10, 22, 40, 0.1);
+  --bg-card:       #FFFFFF;
+  --bg-card-hover: #F0EDE8;
+  --gold-dim:      rgba(201, 168, 76, 0.1);
+}
+/* Specific overrides for elements with hardcoded rgba whites */
+.section-light .qualifications li {
+  background: rgba(10, 22, 40, 0.04);
+  border-color: var(--border);
+}
+.section-light .contact-form input,
+.section-light .contact-form textarea,
+.section-light .contact-form select {
+  background: white;
+  border-color: rgba(10, 22, 40, 0.15);
+  color: #0A1628;
+}
+.section-light .contact-form input::placeholder,
+.section-light .contact-form textarea::placeholder {
+  color: rgba(10, 22, 40, 0.38);
+}
+.section-light .contact-form select option {
+  background: white;
+  color: #0A1628;
+}
+.section-light .framework-note strong { color: #0A1628; }
+.section-light .services-additional strong { color: #0A1628; }
 
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -121,6 +161,12 @@ ul { list-style: none; }
 }
 .btn-white-outline:hover { border-color: rgba(255,255,255,0.55); color: white; }
 .btn-sm { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+.btn-gold-fill { background: var(--gold); color: #0A1628; font-weight: 700; }
+.btn-gold-fill:hover {
+  background: var(--gold-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+}
 
 /* ─── EYEBROW ─── */
 .eyebrow {
