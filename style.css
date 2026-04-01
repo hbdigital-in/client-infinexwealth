@@ -221,7 +221,12 @@ ul { list-style: none; }
 }
 .hero-sub {
   font-size: 1rem; color: var(--text-muted);
-  margin-bottom: 2rem; max-width: 440px; line-height: 1.75;
+  margin-bottom: 0.75rem; max-width: 440px; line-height: 1.75;
+}
+.hero-sub-secondary {
+  font-size: 0.95rem; color: var(--gold-bright);
+  margin-bottom: 2rem; max-width: 440px; line-height: 1.6;
+  font-style: italic;
 }
 .hero-actions { display: flex; gap: 0.875rem; flex-wrap: wrap; }
 
@@ -316,6 +321,10 @@ ul { list-style: none; }
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800; color: var(--text);
   line-height: 1; margin-bottom: 0.5rem;
+}
+.stat-num--long {
+  font-size: clamp(1.5rem, 2.5vw, 2.875rem);
+  white-space: nowrap;
 }
 .stat-label {
   font-size: 0.78rem; font-weight: 500; color: var(--text-muted);
@@ -502,8 +511,9 @@ ul { list-style: none; }
 
 /* ─── PROCESS ─── */
 .process-layout {
-  display: grid; grid-template-columns: 1fr 360px;
+  display: grid; grid-template-columns: 1fr;
   gap: var(--lg); align-items: start;
+  max-width: 640px;
 }
 .process-steps { display: flex; flex-direction: column; }
 .process-step {
@@ -522,7 +532,7 @@ ul { list-style: none; }
 .process-visual img {
   width: 100%; border-radius: var(--radius);
   border: 1px solid var(--gold-border);
-  position: sticky; top: 100px;
+  max-width: 680px; display: block; margin: 0 auto;
 }
 
 /* ─── FAQ ─── */
